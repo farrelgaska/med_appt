@@ -1,0 +1,2 @@
+import {useState} from "react";
+export default function AppointmentFormIC(){const [formData,setFormData]=useState({name:"",phoneNumber:""});const change=e=>setFormData({...formData,[e.target.name]:e.target.value});return <form className="card form" onSubmit={e=>{e.preventDefault();console.log(formData)}}><h2>Contact Information</h2><label>Name<input name="name" value={formData.name} onChange={change} required/></label><label>Phone Number<input name="phoneNumber" type="tel" value={formData.phoneNumber} onChange={change} required/></label><button>Submit</button></form>}

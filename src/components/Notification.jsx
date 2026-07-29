@@ -1,0 +1,1 @@
+export default function Notification(){const list=JSON.parse(localStorage.getItem("appointments")||"[]").filter(a=>a.status==="scheduled");if(!list.length)return null;return <aside className="notification">You have {list.length} upcoming appointment(s).</aside>}
